@@ -34,7 +34,8 @@ def rules_js_dependencies():
     maybe(
         http_archive,
         name = "aspect_bazel_lib",
-        sha256 = "4ef2f746bae7bd7f1ec39dc9b53a9d7e8002f18233ea2c2ee4702bbb5283c7ca",
-        strip_prefix = "bazel-lib-1.3.1",
-        url = "https://github.com/aspect-build/bazel-lib/archive/refs/tags/v1.3.1.tar.gz",
+        # TODO: update to release before landing
+        sha256 = "ad334530b2bc3b2d6114bdc69f2759809f8d542a37d0df7bb153cda9426e65b5",
+        strip_prefix = "bazel-lib-3ba1b88d47eaa05afb55a2d136197c5b728eb6ba",
+        url = "https://github.com/aspect-build/bazel-lib/archive/3ba1b88d47eaa05afb55a2d136197c5b728eb6ba.tar.gz",
     )

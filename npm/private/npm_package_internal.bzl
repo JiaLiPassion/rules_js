@@ -4,10 +4,10 @@ load("@bazel_skylib//lib:dicts.bzl", "dicts")
 load(":npm_package.bzl", _npm_package_lib = "npm_package_lib")
 
 _INTERNAL_ATTRS = dicts.add(_npm_package_lib.attrs, {
-    "provide_source_directory": attr.bool(
-        doc = """If true, source directories are provided and not copied to the output tree.
-
-        For internal rules_js use only.""",
+    "src": attr.label(
+        doc = "A source directory or output directory to use for this package. For specifying a list of files, use `srcs` instead.",
+        allow_single_file = True,
+        mandatory = True,
     ),
 })
 
